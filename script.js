@@ -2,12 +2,12 @@
 const candidatos = {
     governador: {
         "12": "Maria Silva",
-        "15": "João Santos",
+        "15": "João Santos"
         "23": "Alberto Mota"
     },
     presidente: {
         "10": "Carlos Oliveira",
-        "20": "Ana Pereira",
+        "20": "Ana Pereira"
         "45": "Zema Lima"
     }
 };
@@ -15,6 +15,9 @@ const candidatos = {
 // Variáveis para controlar a etapa do voto
 let cargoAtual = "governador"; // Começa em Governador, depois vai pra Presidente
 let numeroDigitado = "";
+
+// Inicializa o rodapé assim que carrega o script
+atualizarRodape();
 
 // Função para colocar números na tela ao clicar nos botões
 function digitar(numero) {
@@ -67,12 +70,27 @@ function confirmar() {
         cargoAtual = "presidente";
         document.getElementById("cargo").innerText = "PRESIDENTE";
         corrigir();
+        atualizarRodape();
     } else {
         // Fim da votação
-        alert("FIM");
+        alert("FIM DA VOTAÇÃO! Obrigado.");
         // Reinicia a urna para o próximo eleitor
         cargoAtual = "governador";
         document.getElementById("cargo").innerText = "GOVERNADOR";
         corrigir();
+        atualizarRodape();
     }
+}
+
+// Atualiza a lista de candidatos mostrada no rodapé de acordo com o cargo atual
+function atualizarRodape() {
+    let listaDiv = document.getElementById("lista-candidatos");
+    let opcoes = candidatos[cargoAtual];
+    let html = "";
+
+    for (let numero in opcoes) {
+        html += "<p><strong>" + numero + "</strong> - " + opcoes[numero] + "</p>";
+    }
+
+    listaDiv.innerHTML = html;
 }

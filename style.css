@@ -5,8 +5,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+}
+
+/* Container externo da Urna + Rodapé */
+.container-urna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Corpo do aparelho da urna */
@@ -101,5 +108,29 @@ body {
 }
 
 .btn-branco {
-    background-color: whitesmoke !important;
+    background-color: whitesmoke !important;  
+}
+
+/* Estilo do Rodapé de Candidatos */
+.rodape-candidatos {
+    margin-top: 15px;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.rodape-candidatos h3 {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.rodape-candidatos p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #333;
 }
