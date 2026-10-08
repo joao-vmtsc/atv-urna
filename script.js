@@ -73,7 +73,7 @@ function confirmar() {
         atualizarRodape();
     } else {
         // Fim da votação
-        alert("FIM DA VOTAÇÃO! Obrigado.");
+        alert("FIM");
         // Reinicia a urna para o próximo eleitor
         cargoAtual = "governador";
         document.getElementById("cargo").innerText = "GOVERNADOR";
