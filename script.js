@@ -16,20 +16,6 @@ const candidatos = {
 let cargoAtual = "governador"; // Começa em Governador, depois vai pra Presidente
 let numeroDigitado = "";
 
-// Inicializa o rodapé assim que carrega o script
-window.onload = function() {
-    atualizarRodape();
-};
-
-// Função para colocar números na tela ao clicar nos botões
-function digitar(numero) {
-    if (numeroDigitado.length < 2) {
-        numeroDigitado += numero;
-        atualizarTela();
-    }
-}
-
-// Atualiza o texto exibido na tela da urna
 function atualizarTela() {
     let display = document.getElementById("display-numero");
     let info = document.getElementById("info-candidato");
@@ -49,6 +35,14 @@ function atualizarTela() {
     }
 }
 
+// Função para colocar números na tela ao clicar nos botões
+function digitar(numero) {
+    if (numeroDigitado.length < 2) {
+        numeroDigitado += numero;
+        atualizarTela();
+    }
+}
+
 // Limpa os números digitados
 function corrigir() {
     numeroDigitado = "";
@@ -61,10 +55,11 @@ function confirmar() {
         alert("Por favor, digite 2 números antes de confirmar!");
         return;
     }
-    
+}
+
 function branco() {
     numeroDigitado = "";
-    atualizarTela
+    atualizarTela();
 }
     let nomeCandidato = candidatos[cargoAtual][numeroDigitado] || "Nulo";
 
@@ -86,7 +81,7 @@ function branco() {
         corrigir();
         atualizarRodape();
     }
-}
+
 
 // Atualiza a lista de candidatos mostrada no rodapé de acordo com o cargo atual
 function atualizarRodape() {
