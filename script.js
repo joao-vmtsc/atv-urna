@@ -2,12 +2,12 @@
 const candidatos = {
     governador: {
         "12": "Maria Silva",
-        "15": "João Santos"
+        "15": "João Santos",
         "23": "Alberto Mota"
     },
     presidente: {
         "10": "Carlos Oliveira",
-        "20": "Ana Pereira"
+        "20": "Ana Pereira",
         "45": "Zema Lima"
     }
 };
