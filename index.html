@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna Eletrônica Simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="urna">
+        <!-- Tela da Urna -->
+        <div class="tela">
+            <h2 id="cargo">GOVERNADOR</h2>
+            <p>Digite o número do candidato:</p>
+            
+            <div class="numero-box" id="display-numero">--</div>
+
+            <div id="info-candidato" class="info-candidato">
+                <!-- Mostra nome do candidato ao digitar -->
+            </div>
+        </div>
+
+        <!-- Teclado Numérico -->
+        <div class="teclado">
+            <div class="linha">
+                <button onclick="digitar('1')">1</button>
+                <button onclick="digitar('2')">2</button>
+                <button onclick="digitar('3')">3</button>
+            </div>
+            <div class="linha">
+                <button onclick="digitar('4')">4</button>
+                <button onclick="digitar('5')">5</button>
+                <button onclick="digitar('6')">6</button>
+            </div>
+            <div class="linha">
+                <button onclick="digitar('7')">7</button>
+                <button onclick="digitar('8')">8</button>
+                <button onclick="digitar('9')">9</button>
+            </div>
+            <div class="linha centralizada">
+                <button onclick="digitar('0')">0</button>
+            </div>
+            <div class="linha acoes">
+                <button class="btn-corrigir" onclick="corrigir()">CORRIGE</button>
+                <button class="btn-confirmar" onclick="confirmar()">CONFIRMAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
