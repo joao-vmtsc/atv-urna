@@ -1,19 +1,19 @@
 // 1. Configuração dos candidatos fictícios
 const candidatos = {
-    governador: {
-        "12": "Maria Silva",
-        "15": "João Santos",
-        "23": "Alberto Mota"
-    },
     presidente: {
         "10": "Carlos Oliveira",
         "20": "Ana Pereira",
         "45": "Zema Lima"
+    },
+    governador: {
+        "12": "Maria Silva",
+        "15": "João Santos",
+        "23": "Alberto Mota"
     }
 };
 
 // Variáveis para controlar a etapa do voto
-let cargoAtual = "governador"; // Começa em Governador, depois vai pra Presidente
+let cargoAtual = "presidente"; // Começa em Governador, depois vai pra Presidente
 let numeroDigitado = "";
 
 function atualizarTela() {
@@ -67,8 +67,8 @@ function branco() {
     alert("Você votou em: " + nomeCandidato);
 
     // Fluxo da votação: Passa de Governador para Presidente
-    if (cargoAtual === "governador") {
-        cargoAtual = "presidente";
+    if (cargoAtual === "presidente") {
+        cargoAtual = "governador";
         document.getElementById("cargo").innerText = "PRESIDENTE";
         corrigir();
         atualizarRodape();
