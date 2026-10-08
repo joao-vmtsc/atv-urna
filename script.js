@@ -2,11 +2,13 @@
 const candidatos = {
     governador: {
         "12": "Maria Silva",
-        "15": "João Santos"
+        "15": "João Santos",
+        "23": "Alberto Mota"
     },
     presidente: {
         "10": "Carlos Oliveira",
-        "20": "Ana Pereira"
+        "20": "Ana Pereira",
+        "45": "Zema Lima"
     }
 };
 
@@ -67,7 +69,7 @@ function confirmar() {
         corrigir();
     } else {
         // Fim da votação
-        alert("FIM DA VOTAÇÃO! Obrigado.");
+        alert("FIM");
         // Reinicia a urna para o próximo eleitor
         cargoAtual = "governador";
         document.getElementById("cargo").innerText = "GOVERNADOR";
