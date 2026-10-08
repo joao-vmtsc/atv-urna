@@ -17,7 +17,9 @@ let cargoAtual = "governador"; // Começa em Governador, depois vai pra Presiden
 let numeroDigitado = "";
 
 // Inicializa o rodapé assim que carrega o script
-atualizarRodape();
+window.onload = function() {
+    atualizarRodape();
+};
 
 // Função para colocar números na tela ao clicar nos botões
 function digitar(numero) {
@@ -59,7 +61,11 @@ function confirmar() {
         alert("Por favor, digite 2 números antes de confirmar!");
         return;
     }
-
+    
+function branco() {
+    numeroDigitado = "";
+    atualizarTela
+}
     let nomeCandidato = candidatos[cargoAtual][numeroDigitado] || "Nulo";
 
     // Janela de confirmação exibindo a mensagem solicitada
